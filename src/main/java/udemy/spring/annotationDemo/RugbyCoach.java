@@ -19,7 +19,7 @@ public class RugbyCoach implements Coach {
 
     // Allow two approaches to construction. One allows the dependency to be passed in
     @Autowired  // Spring grabs a suitable "motivation" and then injects it for us
-    public RugbyCoach(@Qualifier("stickMotivation")   Motivation theMotivation){
+    public RugbyCoach(@Qualifier("carrotMotivation")   Motivation theMotivation){
         motivation=theMotivation;
     }
 
