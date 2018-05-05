@@ -1,6 +1,7 @@
 package udemy.spring.annotationDemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,6 +10,7 @@ public class TrackCoach implements Coach {
     private Motivation motivation;
 
     @Autowired // if there's an implementation of Motivation (flagged with @Component) then inject it
+    @Qualifier("stickMotivation")
     public void setMotivation(Motivation motivation) {
         this.motivation = motivation;
     }
